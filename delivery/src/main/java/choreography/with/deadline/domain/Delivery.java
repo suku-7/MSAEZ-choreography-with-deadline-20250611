@@ -34,10 +34,10 @@ public class Delivery  {
     public static void startDelivery(OrderCreated orderCreated){
 
         //FOCUS: 임의로 처리 속도를 느리게 만든 구간 -- 주문된 상품번호가 1일 경우, 10초의 강제 딜레이를 발생시킨다.
-        // if("1".equals(orderCreated.getProductId()))
-        // try{
-        //     Thread.sleep(10000);
-        // }catch(Exception e){}
+        if("1".equals(orderCreated.getProductId()))
+        try{
+            Thread.sleep(20000);
+        }catch(Exception e){}
 
         // Date now = new Date();
         // if(orderCreated.getTimestamp() + deadlineDurationInMS < now.getTime()) return;  // FOCUS: skip the expired OrderCreated events
